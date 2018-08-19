@@ -5,11 +5,11 @@ import java.util.Scanner;
 public class Main{
 	static MyDbInput dbInput;
 	static MyFileOutput fileOutput;
-	static String connectionString = "jdbc:postgresql://localhost:5432/postgres";
+	static String connectionString = "jdbc:postgresql://localhost:5432/postgres"; // Enter connection string here
 	static int fetchSize = 1000;
 	static String query = "";
-	static String user = "postgres";
-    static String password = "qwe123!@#";
+	static String user = "postgres"; // Enter username here
+    static String password = "qwe123!@#";// Enter password here
     static String fileName = "myDbOutput";
     
 	public static void main(String[] args) {
