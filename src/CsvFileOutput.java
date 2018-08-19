@@ -6,7 +6,7 @@ public class CsvFileOutput implements MyFileOutput {
 	 String csvFile = "TestOutput.csv";
 	 FileWriter writer;
 	public CsvFileOutput(String fileName) {
-		// open file here
+		// Open file 
 		try {
 			writer = new FileWriter(csvFile);
 			
@@ -15,26 +15,30 @@ public class CsvFileOutput implements MyFileOutput {
 		}
 	}
 	
+	// Write file headers
 	public void writeHeaders(String headers) {
 		try {
 			writer.write(headers);
+			System.out.println("Finish writing headers");
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
 	}
 	
+	// Write line to file
 	public void write(String line){
-		System.out.println(line);
 		try {
 			writer.write(line);
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
 	}
+	
+	// close file 
 	public void close() {
-		// close file here
 		try {
 			writer.close();
+			System.out.println("Output file closed");
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
